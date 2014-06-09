@@ -1,4 +1,9 @@
-== README
+== Computer Club SNS
+
+This is a simple SNS made to improve the workflow the SM Computer Club.
+More information will be provided as the project proceeds.
+
+
 
 This README would normally document whatever steps are necessary to get the
 application up and running.
