@@ -1,0 +1,7 @@
+<div class="row">
+	<% if user_signed_in? %>
+	<h1><%= current_user.name %></h1>
+	<% else %>
+	<h1>ログインしてください！</h1>
+	<% end %>
+</div>

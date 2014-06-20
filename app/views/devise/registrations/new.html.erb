@@ -1,0 +1,66 @@
+
+
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+			  <%= devise_error_messages! %>
+
+	<div class="row">
+		<div class="col-md-6 col-md-offset-3">
+			<h2>新しく登録！</h2>
+			<br><br>
+				
+				<form class="form-horizontal" role="form">
+				  <div class="form-group">
+				  	<%= f.label :name, :class=>'col-sm-2 control-label' %>
+				    <div class="col-sm-10">
+				      <%= f.text_field :name, autofocus: true, :class=>'form-control' %>
+				    </div>
+				  </div>
+				  <br><br><br>
+
+				  <div class="form-group">
+				  	<%= f.label :email, :class=>'col-sm-2 control-label' %>
+				    <div class="col-sm-10">
+				      <%= f.email_field :email, autofocus: true, :class=>'form-control' %>
+				    </div>
+				  </div>
+				  <br><br><br>
+
+				  <div class="form-group">
+				  	<%= f.label :password, :class=>'col-sm-3 control-label' %>
+				    <div class="col-sm-9">
+				      <%= f.password_field :password, autocomplete: "off", :class=>'form-control' %>
+				    </div>
+				  </div>
+				  <br><br><br>
+
+				  <div class="form-group">
+				  	<%= f.label :password_confirmation, :class=>'col-sm-3 control-label' %>
+				    <div class="col-sm-9">
+				      <%= f.password_field :password_confirmation, autocomplete: "off", :class=>'form-control' %>
+				    </div>
+				  </div>
+				  <br><br><br>
+
+				  <div class="form-group">
+				     <label for="" class="col-sm-2 control-label">学年</label>
+				    <div class="col-sm-3">
+				  		<%= f.select(:grade, [['中学1年', 1],['中学2年', 2],['中学3年', 3],['高校1年', 4],['高校2年', 5],['高校3年', 6]], :class=>'form-control') %>
+				    </div>
+			  	</div>
+
+				  <br><br><br>
+
+
+				</form>
+
+			<div class="col-md-6 col-md-offset-3">
+				<%= f.submit "登録！", :class=>'btn btn-primary btn-lg' %><br><br>
+				<%= render "devise/shared/links" %>
+			</div>
+
+		</div>
+	</div>
+
+<% end %>
+
+

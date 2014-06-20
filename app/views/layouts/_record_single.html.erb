@@ -1,0 +1,8 @@
+<div class="content" style="overflow:scroll;max-height:400px;">
+	<% @records.each do |r| %>
+	<b><%= r.created_at %></b>
+	<br>
+	<%= r.record_text %>
+	<div class="page-header" style="margin:10px;"></div>
+<% end %>
+</div>
