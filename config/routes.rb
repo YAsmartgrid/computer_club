@@ -5,6 +5,7 @@ ComputerClub::Application.routes.draw do
   get "welcome/index"
   resources :users, only:[:index,:show]
   resources :records, only:[:create]
+  resources :plans, only:[:index]
   # post 'create', to:"records#create"
 
   # The priority is based upon order of creation: first created -> highest priority.

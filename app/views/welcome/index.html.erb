@@ -3,7 +3,7 @@
 		<div class="row">
 		<!-- <h1>ようこそ、渋幕コンピューター同好会公式SNSへ!!</h1> -->
 			<% if user_signed_in? %>
-				<h2><%= @user.name %>さん </h2>
+				<h1><%= @user.name %>さん </h1>
 				<b><%= grade(@user.grade) %></b>
 			<% else %>
 				<h1>Welcome to SMCC.</h1>
@@ -17,7 +17,7 @@
 				<div class="col-md-6">
 					<div class="panel panel-default">
 						<div class="panel-heading">
-							<h2 style="margin:0;">部誌</h2>
+							<h3 style="margin:0;">部誌</h3>
 						</div>
 						<div class="panel-body">
 

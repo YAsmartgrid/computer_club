@@ -12,3 +12,8 @@
  *= require_tree .
  *= require bootstrap.min
  */
+
+ h2 {
+ 	color: #CCC !important;
+ 	font-size: 1.5em !important;
+ }
