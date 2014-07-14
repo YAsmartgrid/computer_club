@@ -1,33 +1,68 @@
 
-	<div class="container">
-		<div class="row">
+	
+		
 		<!-- <h1>ようこそ、渋幕コンピューター同好会公式SNSへ!!</h1> -->
 			<% if user_signed_in? %>
-				<h1><%= @user.name %>さん </h1>
-				<b><%= grade(@user.grade) %></b>
+				<div class="row">
+					<div class="col-md-3">
+						<div class="row">
+							<div class="col-md-3" style="padding:10px;">
+								<%= gravatar_for(current_user) %>
+							</div>
+							<div class="col-md-8" style="margin-left:5px;">
+								<h1 style="margin:10px 0;"><%= @user.name %></h1>
+								<b><%= grade(@user.grade) %></b>
+							</div>
+						</div>
+						<!-- end row -->
+
+						
+							<h4>参加プロジェクト</h4>
+							<%= render 'projects/user_contributions' %>
+						<br>
+					</div> 
+					<!-- end col-md-3 -->
+
+					<div class="col-md-9">
+						
+							<%= render 'plans/weekly_plans' %>
+						
+					</div>
+					<!-- end col-md-9 -->
+				</div>
+			<!-- end row -->
+				
+
+				<div class="row">
+					<div class="col-md-6">
+						<%= render 'layouts/news' %>
+					</div>
+
+					<div class="col-md-6">
+						<div class="panel panel-default">
+							<div class="panel-heading">
+								<h4 style="margin:0;">部誌</h4>
+							</div>
+							<div class="panel-body">
+								<%= render 'layouts/record_single' %>
+							</div>
+						</div>
+						<%= render 'layouts/record_form' %>
+					</div>
+					<!-- end col-md-6 -->
+					
+				</div>
+				<!-- end row -->
+				
 			<% else %>
 				<h1>Welcome to SMCC.</h1>
 				<h2>ログインか新規登録をしてください。</h2>
 			<% end %>
-		</div>
-		<br>
+		
+	</div>
+	<br>
 		
 		<% if user_signed_in? %>
-			<div class="row">
-				<div class="col-md-6">
-					<div class="panel panel-default">
-						<div class="panel-heading">
-							<h3 style="margin:0;">部誌</h3>
-						</div>
-						<div class="panel-body">
-
-							<%= render 'layouts/record_single' %>
-						</div>
-					</div>
-				</div>
-
-				<%= render 'layouts/record_form' %>
-
-			</div>
+			
 		<% end %>
-	</div>
+	

@@ -1,5 +1,11 @@
 <% @user.each do |u| %>
-	<h2><%= u.name %></h2>
-	<b><%= grade(u.grade) %></b>
+	<div class="row">
+		<div class="col-md-1"><%= gravatar_for(u) %></div>
+		<div class="col-md-11">
+			<h3><%= u.name %></h3>
+			<h2><%= grade(u.grade) %></h2>
+		</div>
+	</div>
+	
 	<div class="page-header" style="margin:0"></div>
 <% end %>

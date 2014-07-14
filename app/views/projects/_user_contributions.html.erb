@@ -1,0 +1,4 @@
+<% current_user.projects.all.each do |p| %>
+	<li style="list-style-type:none;margin-left:5px;"><%= p.title %></li>
+	
+<% end %>

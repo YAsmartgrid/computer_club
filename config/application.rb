@@ -21,5 +21,6 @@ module ComputerClub
     # config.i18n.default_locale = :de
 
     config.i18n.default_locale = :ja
+    config.time_zone = 'Tokyo'
   end
 end

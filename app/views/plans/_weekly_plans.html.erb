@@ -1,0 +1,28 @@
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<h4 style="margin:0;">今週の活動日と予定</h4>
+	</div>
+	<div class="panel-body" style="padding:0;">
+		<div class="row" style="margin:0;">
+
+		<% @plans.each do |p| %>
+			
+			<div class="col-md-2 day">
+				<% if p.users.include?(current_user) %>
+					<%= button_to "欠席", { action: "leave", id: p.id }, class: "btn btn-danger" %>
+				<% else %>
+					<%= button_to "出席", { action: "join", id: p.id }, class: "btn btn-success" %>
+				<% end %>
+
+				<div class="panel panel-default" style="margin:0;">
+					<div class="date"><%= p.date %></div>
+					<div class="panel-body">
+						<%= p.desc %>
+					</div>
+				</div>
+			</div>
+		<% end %>
+
+		</div>
+	</div>
+</div>

@@ -1,6 +1,35 @@
 <div class="container">
-	<h1>予定と日程</h1>
-	<h2>今後の予定と短期の計画がまとまっていますー！</h2>
+	<h1>予定と参加状況</h1>
+	<h2>今後の予定と各メンバーの参加状況です！</h2>
 	<div class="page-header">
+	</div>
+
+	<div class="row">
+	
+		<% @plans.each do |p| %>
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h4 style="margin:0;">
+						<%= p.date %>
+						
+							<% if p.users.any? %>
+								<% p.users.each do |u| %>
+								<span style="margin-left:20px;">
+									<%= u.name %>
+								</span>
+								<% end %>
+							<% end %>
+						
+					</h4>
+				</div>
+				<div class="panel-body">
+					<%= p.desc %>
+					
+				</div>
+			</div>
+			
+			<br>
+			
+		<% end %>
 	</div>
 </div>
