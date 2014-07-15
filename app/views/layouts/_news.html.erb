@@ -1,7 +1,7 @@
 <div class="panel panel-default">
 	<div class="panel-heading"><h4 style="margin:0;">連絡</h4></div>
 	<div class="panel-body">
-		<% News.all.each do |n| %>
+		<% News.all.reverse.each do |n| %>
 			<div class="news_single" style="overflow:scroll;max-height:400px;">
 				<span style="color:red"><%= n.title %></span>
 				<span style="text-align:right"><%= n.created_at %></span>

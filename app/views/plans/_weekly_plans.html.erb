@@ -9,9 +9,9 @@
 			
 			<div class="col-md-2 day">
 				<% if p.users.include?(current_user) %>
-					<%= button_to "欠席", { action: "leave", id: p.id }, class: "btn btn-danger" %>
+					<%= button_to "出席", { action: "leave", id: p.id }, class: "btn btn-success" %>
 				<% else %>
-					<%= button_to "出席", { action: "join", id: p.id }, class: "btn btn-success" %>
+					<%= button_to "欠席", { action: "join", id: p.id }, class: "btn btn-danger" %>
 				<% end %>
 
 				<div class="panel panel-default" style="margin:0;">
