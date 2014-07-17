@@ -14,7 +14,10 @@
  */
 
 
-@font-face { font-family:'03SmartFontUI'; src: url('smartfontui.otf'); } 
+@font-face { 
+	font-family:'03SmartFontUI'; 
+	src: url('smartfontui.otf'); 
+} 
 
 
  h2 {
